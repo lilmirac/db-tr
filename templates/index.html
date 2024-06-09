@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2>Turkey Database</h2>
+        </header>
+        <main class="main-content">
+            <section class="upper-layout">
+                <div class="left-side">
+                    <form id="field-search-form">
+                        <label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="name" name="name">
+                        <label for="blank">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <label for="surname">Surname&nbsp;&nbsp;</label>
+                        <input type="text" id="surname" name="surname">
+                        <br><br>
+                        <label for="city">City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="city" name="city">
+                        <label for="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <label for="year">Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="year" name="year">
+                        <br><br>
+                        <label for="partial_name">Partial Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="checkbox" id="partial_name" name="partial_name">
+                        <div class="form-group"></div>
+                        <label for="partial_surname">Partial Surname&nbsp;&nbsp;</label>
+                        <input type="checkbox" id="partial_surname" name="partial_surname">
+                        <br><br>
+                        <button type="submit"><i class="fas fa-search"></i> Search by Fields</button>
+                    </form>
+                    <br><br>
+                    <form id="tc-search-form" class="inline-group">
+                        <label for="tc">TC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="tc" name="tc" required>
+                        <button type="submit"><i class="fas fa-search"></i> Search</button>
+                    </form>
+
+                    <form id="gsm-search-form" class="inline-group">
+                        <label for="gsm">GSM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="gsm" name="gsm">
+                        <button type="submit"><i class="fas fa-search"></i> Search</button>
+                    </form>
+                </div>
+                <div class="right-side">
+                    <div id="results" class="results"></div>
+                </div>
+            </section>
+            <section class="lower-layout">
+                <table id="field-results" class="results-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>TC</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Birth</th>
+                            <th>City</th>
+                            <th>Town</th>
+                            <th>Mother</th>
+                            <th>Mother TC</th>
+                            <th>Father</th>
+                            <th>Father TC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <table id="gsm-results" class="results-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>TC</th>
+                            <th>GSM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
